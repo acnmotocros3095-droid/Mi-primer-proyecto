@@ -1,0 +1,9 @@
+# Compilacion y binarios tempoprales de .NET / C#
+bin/
+obj/
+*.user
+*.suo
+
+#Archivos de entorno con contraseñas o cadenas de conexion a Sql Server
+.env
+appsettings.Development.json
