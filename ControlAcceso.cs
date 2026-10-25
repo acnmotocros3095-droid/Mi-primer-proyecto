@@ -5,8 +5,11 @@ class Program
     {
         Console.Write("Ingrese su edad: ");
         string entrada = Console.ReadLine();
-        int edad = int.Parse(entrada);
-        if (edad < 0 || edad > 120){
+        if(!int.TryParse(entrada, out int edad))
+        {
+            Console.WriteLine("Error Critico: Debe ingresar un numero entero valido (no letras ni simbolos)");
+        }
+        else if (edad < 0 || edad > 120){
             Console.WriteLine("Error: Edad fuerea de rango valido");
         }
         else if (edad <= 17){
